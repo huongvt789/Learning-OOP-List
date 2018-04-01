@@ -6,10 +6,11 @@ class Animal{
 	protected $color;
 	protected $name;
 
-	public function __constructor($weight_animal,$color_animal,$name_animal){
-		$this->weight=$weight_animal;
-		$this->color=$color_animal;
-		$this->name=$name_animal;
+	public function setData($weight=null,$color=null,$name=null){
+		$this->weight=$weight;
+		$this->color=$color;
+		$this->name=$name;
+
 	}
 
 	public function setWeight($weight)
@@ -47,20 +48,24 @@ class Animal{
 
 class Animal_Dog extends Animal
 {
-	public function setWeight($weight)
+	public function __construct($weight, $color, $name){
+				$this->setData($weight, $color, $name);
+		}
+	private $say="Hello word";
+	public function getValue()
 	{
-		parent::setWeight();
-	}
-
-	public function getWeight(){
-		parent::getWeight();
+		echo $this->weight;
+		echo $this->color;
+		echo $this->name;
+		echo $this->say;
 	}
 }
 
 // End to do class Animal_dog
-// Call Class Child
- $animal_dog=new Animal;
- $animal_dog->setWeight("100kg");
- $animal_dog->getWeight();
+// Call
+ $animal_dog=new Animal_Dog("100kg","Blue","Dog");
+ $animal_dog->getValue();
 
 ?>
+
+<!-- Ket luan: Lop con ke thua lop cha thi duoc su dung cac thanh phan cua lop cha. Dac biet la co the mo rong them dac tinh rieng co. -->
