@@ -38,3 +38,5 @@ $person=new Item_Person("Viva","20","Play sport");
 $person=$person->getData();
 
 ?>
+
+<!-- Ket luan: Khi bat ky mot lop nao ke thua lop trua tuong thi phai dinh nghia tat ca cac phuong thuc cua lop do dua ra. -->
